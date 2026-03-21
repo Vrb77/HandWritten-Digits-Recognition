@@ -25,8 +25,8 @@ def preprocess_image(uploaded_file):
     image = Image.open(uploaded_file).convert("L")
 
     # Resize to 28x28
-    img = image.resize((28, 28))
-     # Convert PIL image to NumPy array
+    image = image.resize((28, 28))
+    # Convert PIL image to NumPy array
     img = np.array(image)
 
     # Background check & invert if required
@@ -43,21 +43,25 @@ def preprocess_image(uploaded_file):
 
 
 
+# Cache model so it loads only once across reruns
+@st.cache_resource
+def get_model():
+    return load_model('DigitsPrediction.keras')
+
+model = get_model()
+
 # Provide a button for user to click and get the predictions
 submit = st.button('Predict the results here')
 
-# Load the keras model files: model
-model = load_model(r'DigitsPrediction.keras')
-
 # What should happen when user clicks on submit button
 if submit:
-     if upload_image is not None:
+    if upload_image is not None:
         img_array = preprocess_image(upload_image)
 
         preds = model.predict(img_array)
         final_pred = np.argmax(preds, axis=1)
 
-        st.image(upload_image,width=200)
+        st.image(upload_image, width=200)
         st.subheader(f"✅ Predicted Digit: **{final_pred[0]}**")
-else:
-    st.warning("⚠️ Please upload an image first.")
+    else:
+        st.warning("⚠️ Please upload an image first.")
