@@ -1,9 +1,9 @@
 # HandWritten-Digits-Recognition <br/>
-0️⃣1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣<br/>
+0️⃣1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣9️⃣<br/><br/>
 • Built a CNN-based image classification model using TensorFlow / Keras trained on the MNIST dataset to recognize 
 handwritten digits (0-9), applying OpenCV for image preprocessing and scikit-learn for model evaluation metrics 
-<br/>
+<br/><br/>
 • Deployed the trained model as a live web application using Streamlit.
-<br/>
-Live Demo - https://reviews-classification.streamlit.app/ <br/>
+<br/><br/>
+Live Demo - https://reviews-classification.streamlit.app/ <br/><br/>
 [Click Here](https://reviews-classification.streamlit.app/)
