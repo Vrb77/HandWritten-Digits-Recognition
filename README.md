@@ -5,5 +5,5 @@ handwritten digits (0-9), applying OpenCV for image preprocessing and scikit-lea
 <br/><br/>
 • Deployed the trained model as a live web application using Streamlit.
 <br/><br/>
-Live Demo - https://reviews-classification.streamlit.app/ <br/><br/>
-[Click Here](https://reviews-classification.streamlit.app/)
+Live Demo - https://handwritten-digits-recognition.streamlit.app/ <br/><br/>
+[Click Here](https://handwritten-digits-recognition.streamlit.app/)
